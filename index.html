@@ -9,9 +9,12 @@
     <meta name="apple-mobile-web-app-title" content="Homy" />
     <meta name="description" content="Homy — מערכת הפעלה רגועה לניהול הבית" />
     <link rel="icon" href="./icon.svg" />
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <!-- A tab that cannot render SVG falls back to the raster mark rather than to nothing. -->
+    <link rel="alternate icon" href="./icon-192.png" sizes="192x192" />
+    <!-- iOS ignores the manifest icons for the home screen and reads only this one. -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
     <title>Homy — הבית, ביחד</title>
-    <script type="module" crossorigin src="./assets/index--4KvgM1r.js"></script>
+    <script type="module" crossorigin src="./assets/index-BA7dUT7M.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/jsx-runtime-BJlj-rJB.js">
     <link rel="stylesheet" crossorigin href="./assets/index-DEj5HJak.css">
   <link rel="manifest" href="./manifest.webmanifest"></head>
