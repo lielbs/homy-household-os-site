@@ -14,9 +14,29 @@
     <!-- iOS ignores the manifest icons for the home screen and reads only this one. -->
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
     <title>Homy — הבית, ביחד</title>
-    <script type="module" crossorigin src="./assets/index-CQEM775l.js"></script>
+    <!--
+      Resolve the appearance before the first paint, so opening Homy in dark mode never flashes the
+      cream page first. This has to be inline and blocking; anything bundled runs too late. Keep the
+      key and the two page colours in step with src/lib/theme.ts.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('homy-theme')
+          var theme = stored === 'light' || stored === 'dark' ? stored
+            : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+          document.documentElement.dataset.theme = theme
+          document.documentElement.style.colorScheme = theme
+          if (theme === 'dark') {
+            var meta = document.querySelector('meta[name="theme-color"]')
+            if (meta) meta.setAttribute('content', '#131e1a')
+          }
+        } catch (error) { /* an unreadable localStorage just means the default light theme */ }
+      })()
+    </script>
+    <script type="module" crossorigin src="./assets/index-C8moJC3B.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/jsx-runtime-BJlj-rJB.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-CtVPWPvN.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-D1HNb8Ng.css">
   <link rel="manifest" href="./manifest.webmanifest"></head>
   <body><div id="root"></div></body>
 </html>
