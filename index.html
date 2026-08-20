@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#eceef1" />
+    <meta name="theme-color" content="#F6F4EF" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Homy" />
-    <meta name="description" content="Homy — מערכת הפעלה רגועה לניהול הבית" />
+    <meta name="apple-mobile-web-app-title" content="RAVO" />
+    <meta name="description" content="RAVO — הבית מסתדר. אתם נושמים." />
     <link rel="icon" href="./icon.svg" />
     <!-- A tab that cannot render SVG falls back to the raster mark rather than to nothing. -->
     <link rel="alternate icon" href="./icon-192.png" sizes="192x192" />
     <!-- iOS ignores the manifest icons for the home screen and reads only this one. -->
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <title>Homy — הבית, ביחד</title>
+    <title>RAVO — הבית מסתדר. אתם נושמים.</title>
     <!--
-      Resolve the appearance before the first paint, so opening Homy in dark mode never flashes the
+      Resolve the appearance before the first paint, so opening RAVO in dark mode never flashes the
       cream page first. This has to be inline and blocking; anything bundled runs too late. Keep the
       key and the two page colours in step with src/lib/theme.ts.
     -->
@@ -29,14 +29,14 @@
           document.documentElement.style.colorScheme = theme
           if (theme === 'dark') {
             var meta = document.querySelector('meta[name="theme-color"]')
-            if (meta) meta.setAttribute('content', '#0f1117')
+            if (meta) meta.setAttribute('content', '#10120F')
           }
         } catch (error) { /* an unreadable localStorage just means the default light theme */ }
       })()
     </script>
-    <script type="module" crossorigin src="./assets/index-n9U6wAGl.js"></script>
+    <script type="module" crossorigin src="./assets/index-C4OownlC.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/jsx-runtime-BJlj-rJB.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-Br6OVXEK.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-Q_d7YgGh.css">
   <link rel="manifest" href="./manifest.webmanifest"></head>
   <body><div id="root"></div></body>
 </html>
